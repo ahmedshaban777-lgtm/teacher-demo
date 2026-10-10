@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>أ. محمد سامي | مدرّس رياضيات - شرح أونلاين ومتابعة حقيقية</title>
+<meta name="description" content="دروس رياضيات للمرحلتين الإعدادية والثانوية: شرح مبسط، واجبات مصححة، ومتابعة مستمرة لولي الأمر. احجز حصتك التجريبية مجانًا.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0d1b2e; --navy2:#122540; --ink:#1b2430; --muted:#5b6b7f;
+  --gold:#f5b301; --gold2:#ffd257; --green:#22c15e; --green2:#1da851;
+  --bg:#f7f8fb; --card:#ffffff; --line:#e6eaf1;
+  --radius:18px; --shadow:0 10px 30px rgba(13,27,46,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Tajawal',sans-serif;color:var(--ink);background:var(--bg);line-height:1.7}
+h1,h2,h3,h4{font-family:'Cairo',sans-serif;line-height:1.35}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1120px,92%);margin-inline:auto}
+.section{padding:84px 0}
+.section-head{text-align:center;max-width:640px;margin:0 auto 52px}
+.section-head .kicker{display:inline-block;background:#fff3d1;color:#8a6400;font-weight:700;font-size:.85rem;padding:6px 16px;border-radius:999px;margin-bottom:14px}
+.section-head h2{font-size:clamp(1.6rem,3.4vw,2.4rem);font-weight:800;color:var(--navy)}
+.section-head p{color:var(--muted);margin-top:10px}
+
+/* ===== Nav ===== */
+nav{position:fixed;inset-inline:0;top:0;z-index:50;backdrop-filter:blur(12px);background:rgba(13,27,46,.82);border-bottom:1px solid rgba(255,255,255,.08)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:66px}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;font-family:'Cairo';font-weight:800;font-size:1.1rem}
+.brand .logo{width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--gold),var(--gold2));display:grid;place-items:center;font-size:1.15rem}
+.nav-links{display:flex;gap:26px;list-style:none}
+.nav-links a{color:#cfd9e6;font-weight:500;font-size:.95rem;transition:color .2s}
+.nav-links a:hover{color:var(--gold2)}
+.nav-cta{background:var(--gold);color:var(--navy);font-weight:800;padding:9px 20px;border-radius:999px;font-size:.9rem;transition:transform .15s,box-shadow .15s}
+.nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 18px rgba(245,179,1,.35)}
+.burger{display:none;background:none;border:none;color:#fff;font-size:1.5rem;cursor:pointer}
+
+/* ===== Hero ===== */
+.hero{position:relative;background:radial-gradient(900px 500px at 85% -10%,rgba(245,179,1,.18),transparent 60%),radial-gradient(700px 500px at 10% 110%,rgba(34,193,94,.14),transparent 55%),linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#fff;padding:158px 0 96px;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:26px 26px;pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center;z-index:1}
+.hero .tag{display:inline-flex;align-items:center;gap:8px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);padding:7px 16px;border-radius:999px;font-size:.85rem;color:var(--gold2);font-weight:700}
+.hero h1{font-size:clamp(2rem,4.6vw,3.3rem);font-weight:900;margin:18px 0 14px}
+.hero h1 .hl{color:var(--gold2);position:relative;white-space:nowrap}
+.hero p.lead{color:#b9c6d6;font-size:1.1rem;max-width:520px}
+.hero-btns{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:800;padding:14px 28px;border-radius:14px;font-size:1rem;transition:transform .15s,box-shadow .15s;border:none;cursor:pointer;font-family:'Cairo'}
+.btn-gold{background:linear-gradient(135deg,var(--gold),var(--gold2));color:var(--navy)}
+.btn-gold:hover{transform:translateY(-3px);box-shadow:0 12px 26px rgba(245,179,1,.4)}
+.btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3)}
+.btn-ghost:hover{border-color:var(--gold2);color:var(--gold2)}
+.hero-stats{display:flex;gap:34px;margin-top:44px;flex-wrap:wrap}
+.hero-stats .stat b{display:block;font-family:'Cairo';font-size:1.6rem;font-weight:900;color:var(--gold2)}
+.hero-stats .stat span{color:#9fb0c4;font-size:.88rem}
+.hero-card{position:relative;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:26px;backdrop-filter:blur(8px)}
+.hero-card .chips{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px}
+.hero-card .chip{background:rgba(245,179,1,.14);color:var(--gold2);border:1px solid rgba(245,179,1,.3);font-size:.78rem;font-weight:700;padding:5px 12px;border-radius:999px}
+.hero-card h3{font-size:1.25rem;font-weight:800;margin-bottom:8px}
+.hero-card p{color:#b9c6d6;font-size:.94rem}
+.hero-card .float{position:absolute;background:#fff;color:var(--ink);border-radius:14px;padding:10px 16px;font-size:.82rem;font-weight:700;box-shadow:0 14px 30px rgba(0,0,0,.25);display:flex;align-items:center;gap:8px}
+.float.f1{top:-20px;inset-inline-start:-18px}
+.float.f2{bottom:-20px;inset-inline-end:-14px}
+.float .dot{width:9px;height:9px;border-radius:50%;background:var(--green)}
+
+/* ===== Features ===== */
+.features{background:var(--bg)}
+.cards{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px 22px;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s}
+.card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(13,27,46,.13)}
+.card .icon{width:52px;height:52px;border-radius:14px;display:grid;place-items:center;font-size:1.5rem;margin-bottom:16px;background:linear-gradient(135deg,#fff3d1,#ffe9a8)}
+.card:nth-child(2) .icon{background:linear-gradient(135deg,#d9f7e5,#b6f0cd)}
+.card:nth-child(3) .icon{background:linear-gradient(135deg,#dde8ff,#c3d6ff)}
+.card:nth-child(4) .icon{background:linear-gradient(135deg,#ffe1e1,#ffc9c9)}
+.card h3{font-size:1.08rem;font-weight:800;color:var(--navy);margin-bottom:8px}
+.card p{color:var(--muted);font-size:.92rem}
+
+/* ===== Video ===== */
+.video{background:linear-gradient(160deg,var(--navy) 0%,var(--navy2) 100%);color:#fff}
+.video .section-head h2{color:#fff}
+.video .section-head p{color:#9fb0c4}
+.video-frame{position:relative;width:min(860px,100%);margin:0 auto;aspect-ratio:16/9;border-radius:22px;overflow:hidden;border:1px solid rgba(255,255,255,.14);background:repeating-linear-gradient(45deg,#16283f,#16283f 14px,#1a2d47 14px,#1a2d47 28px);display:grid;place-items:center;text-align:center}
+.video-frame .play{width:84px;height:84px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--gold2));display:grid;place-items:center;font-size:2rem;color:var(--navy);margin:0 auto 16px;box-shadow:0 0 0 14px rgba(245,179,1,.15)}
+.video-frame h3{font-size:1.2rem;font-weight:800}
+.video-frame p{color:#9fb0c4;font-size:.9rem;margin-top:6px}
+.video-note{text-align:center;color:#7e93ab;font-size:.85rem;margin-top:18px}
+
+/* ===== About ===== */
+.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:52px;align-items:center}
+.about-photo{position:relative}
+.about-photo .frame{border-radius:24px;background:linear-gradient(150deg,#dde8ff,#f3e6c4);aspect-ratio:4/5;display:grid;place-items:center;border:1px solid var(--line);box-shadow:var(--shadow);overflow:hidden}
+.about-photo .avatar{font-size:6rem}
+.about-photo .badge{position:absolute;bottom:22px;inset-inline-end:-16px;background:#fff;border-radius:14px;box-shadow:var(--shadow);padding:12px 18px;font-weight:800;color:var(--navy);font-size:.9rem;border:1px solid var(--line)}
+.about-photo .badge b{color:var(--green2);display:block;font-size:1.25rem;font-family:'Cairo'}
+.about-copy h2{font-size:clamp(1.5rem,3vw,2.1rem);font-weight:800;color:var(--navy);margin-bottom:14px}
+.about-copy p{color:var(--muted);margin-bottom:14px}
+.about-list{list-style:none;margin-top:18px;display:grid;gap:12px}
+.about-list li{display:flex;gap:11px;align-items:flex-start;font-weight:500}
+.about-list .check{flex:none;width:24px;height:24px;border-radius:50%;background:#d9f7e5;color:var(--green2);display:grid;place-items:center;font-weight:900;font-size:.8rem;margin-top:3px}
+
+/* ===== Pricing ===== */
+.pricing{background:#fff}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;align-items:stretch}
+.plan{background:var(--bg);border:1.5px solid var(--line);border-radius:22px;padding:32px 26px;display:flex;flex-direction:column;position:relative;transition:transform .2s,box-shadow .2s}
+.plan:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+.plan.featured{background:var(--navy);color:#fff;border-color:var(--navy);box-shadow:0 24px 50px rgba(13,27,46,.28)}
+.plan .ribbon{position:absolute;top:-14px;inset-inline-start:50%;transform:translateX(50%);background:var(--gold);color:var(--navy);font-weight:800;font-size:.78rem;padding:5px 16px;border-radius:999px}
+.plan h3{font-size:1.15rem;font-weight:800}
+.plan .price{font-family:'Cairo';font-weight:900;font-size:2.3rem;color:var(--navy);margin:12px 0 4px}
+.plan.featured .price{color:var(--gold2)}
+.plan .price small{font-size:.95rem;font-weight:500;color:var(--muted)}
+.plan.featured .price small{color:#9fb0c4}
+.plan ul{list-style:none;margin:20px 0 26px;display:grid;gap:11px;flex:1}
+.plan li{display:flex;gap:10px;font-size:.93rem;color:var(--muted)}
+.plan.featured li{color:#c6d2e0}
+.plan li::before{content:"✓";flex:none;width:20px;height:20px;border-radius:50%;background:#d9f7e5;color:var(--green2);display:grid;place-items:center;font-size:.7rem;font-weight:900;margin-top:3px}
+.plan .btn{justify-content:center}
+.plan .btn-outline{background:transparent;border:1.5px solid var(--navy);color:var(--navy)}
+.plan .btn-outline:hover{background:var(--navy);color:#fff}
+
+/* ===== Testimonials ===== */
+.testis{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.testi{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:var(--shadow)}
+.testi .stars{color:var(--gold);letter-spacing:3px;margin-bottom:12px}
+.testi p{color:var(--ink);font-size:.96rem}
+.testi .who{display:flex;align-items:center;gap:12px;margin-top:18px}
+.testi .who .pic{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#dde8ff,#c3d6ff);display:grid;place-items:center;font-size:1.2rem}
+.testi .who b{display:block;font-size:.92rem;color:var(--navy)}
+.testi .who span{font-size:.8rem;color:var(--muted)}
+
+/* ===== FAQ ===== */
+.faq{background:#fff}
+.faq-list{max-width:760px;margin:0 auto;display:grid;gap:14px}
+details{background:var(--bg);border:1px solid var(--line);border-radius:14px;padding:0;overflow:hidden}
+summary{cursor:pointer;list-style:none;padding:18px 22px;font-weight:800;color:var(--navy);font-family:'Cairo';display:flex;justify-content:space-between;align-items:center;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;color:var(--gold);font-weight:900;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+details .answer{padding:0 22px 18px;color:var(--muted);font-size:.95rem}
+
+/* ===== CTA / Contact ===== */
+.cta{background:linear-gradient(150deg,var(--navy),var(--navy2));color:#fff;text-align:center;position:relative;overflow:hidden}
+.cta::before{content:"";position:absolute;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle,rgba(34,193,94,.22),transparent 70%);top:-200px;inset-inline-start:-120px}
+.cta h2{font-size:clamp(1.6rem,3.6vw,2.5rem);font-weight:900;position:relative}
+.cta p{color:#b9c6d6;max-width:560px;margin:14px auto 32px;position:relative}
+.btn-wa{background:var(--green);color:#fff;font-size:1.1rem;padding:16px 38px;border-radius:16px;position:relative}
+.btn-wa:hover{background:var(--green2);transform:translateY(-3px);box-shadow:0 14px 30px rgba(34,193,94,.4)}
+.cta .alt{display:block;margin-top:18px;color:#7e93ab;font-size:.88rem;position:relative}
+
+/* ===== Footer ===== */
+footer{background:#0a1524;color:#7e93ab;padding:30px 0;text-align:center;font-size:.88rem}
+footer b{color:#cfd9e6}
+
+/* ===== Floating WA ===== */
+.wa-float{position:fixed;bottom:22px;inset-inline-start:22px;z-index:60;width:58px;height:58px;border-radius:50%;background:var(--green);display:grid;place-items:center;box-shadow:0 12px 26px rgba(34,193,94,.45);transition:transform .2s}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px;fill:#fff}
+
+/* ===== Reveal ===== */
+.reveal{opacity:0;transform:translateY(26px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ===== Responsive ===== */
+@media (max-width:900px){
+  .cards{grid-template-columns:repeat(2,1fr)}
+  .plans,.testis{grid-template-columns:1fr;max-width:440px;margin-inline:auto}
+  .hero-grid,.about-grid{grid-template-columns:1fr;gap:40px}
+  .hero{padding-top:130px}
+  .about-photo{max-width:380px;margin-inline:auto}
+  .nav-links{position:fixed;top:66px;inset-inline:0;background:var(--navy2);flex-direction:column;padding:18px 5%;gap:16px;display:none;border-bottom:1px solid rgba(255,255,255,.1)}
+  .nav-links.open{display:flex}
+  .burger{display:block}
+}
+@media (max-width:560px){
+  .cards{grid-template-columns:1fr}
+  .section{padding:64px 0}
+  .hero-stats{gap:22px}
+  .float.f1{inset-inline-start:0}
+  .float.f2{inset-inline-end:0}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap nav-inner">
+    <a href="#" class="brand"><span class="logo">∑</span> أ. محمد سامي</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#features">المميزات</a></li>
+      <li><a href="#video">حصة تجريبية</a></li>
+      <li><a href="#about">عن المدرّس</a></li>
+      <li><a href="#pricing">الأسعار</a></li>
+      <li><a href="#faq">الأسئلة الشائعة</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">احجز الآن</a>
+    <button class="burger" id="burger" aria-label="القائمة">☰</button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tag">🎓 رياضيات | إعدادي وثانوي</span>
+      <h1>ابنك يفهم الرياضيات <span class="hl">من أول حصة</span><br>مش بس يحفظها</h1>
+      <p class="lead">شرح مبسط خطوة بخطوة، واجبات مصححة بإيد المدرّس، وتقرير دوري لولي الأمر. أونلاين من بيتك وبالجدول اللي يناسبك.</p>
+      <div class="hero-btns">
+        <a href="#contact" class="btn btn-gold">احجز حصة تجريبية مجانًا 🎯</a>
+        <a href="#pricing" class="btn btn-ghost">شوف الباقات</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><b>+٨ سنوات</b><span>خبرة تدريس</span></div>
+        <div class="stat"><b>+٣٠٠ طالب</b><span>اتخرجوا معانا</span></div>
+        <div class="stat"><b>٩٦٪</b><span>نسبة تحسّن الدرجات</span></div>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="float f1"><span class="dot"></span> متاح أونلاين الآن</div>
+      <div class="chips"><span class="chip">جبر</span><span class="chip">هندسة</span><span class="chip">حساب مثلثات</span><span class="chip">تفاضل</span></div>
+      <h3>نظام المتابعة عندنا مختلف</h3>
+      <p>كل طالب ليه ملف: مستواه فين، نقط ضعفه إيه، وامتحان قصير بعد كل وحدة. ولي الأمر يوصله تقرير واضح كل أسبوعين على واتساب.</p>
+      <div class="float f2">📈 آخر دفعة: متوسط تحسّن ٢٣ درجة</div>
+    </div>
+  </div>
+</header>
+
+<!-- FEATURES -->
+<section class="section features" id="features">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">ليه معانا؟</span>
+      <h2>مش مجرد شرح.. نظام كامل للطالب</h2>
+      <p>أربع حاجات بيفرقوا فعلًا في نتيجة ابنك آخر الترم</p>
+    </div>
+    <div class="cards">
+      <div class="card reveal"><div class="icon">🧠</div><h3>شرح مبسط بالتطبيق</h3><p>كل قاعدة بنحل عليها مسائل متدرجة من السهل للصعب، لحد ما الطالب يحل لوحده.</p></div>
+      <div class="card reveal"><div class="icon">📝</div><h3>واجب مصحح كل أسبوع</h3><p>الواجب يتصحح بإيد المدرّس شخصيًا مع ملاحظات مكتوبة على كل غلطة.</p></div>
+      <div class="card reveal"><div class="icon">📊</div><h3>تقرير لولي الأمر</h3><p>تقرير كل أسبوعين: الحضور، الدرجات، ونقط الضعف اللي بنشتغل عليها.</p></div>
+      <div class="card reveal"><div class="icon">⏰</div><h3>مواعيد مرنة</h3><p>مجموعات صغيرة أو حصص فردية، صباحي أو مسائي، وتعويض لأي حصة فاتت.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- VIDEO -->
+<section class="section video" id="video">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">جرّب بنفسك</span>
+      <h2>شوف نموذج من شرحنا</h2>
+      <p>جزء من حصة حقيقية في الجبر - عشر دقايق هتوضحلك طريقة الشرح</p>
+    </div>
+    <div class="video-frame reveal">
+      <div>
+        <div class="play">▶</div>
+        <h3>فيديو الحصة التجريبية</h3>
+        <p>(مساحة مخصصة لفيديو العميل - يتم تضمينه هنا)</p>
+      </div>
+    </div>
+    <p class="video-note">الفيديو مش هيظهر كلينك خارجي - بيتعرض جوه الموقع مباشرة</p>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal">
+      <div class="frame"><span class="avatar">👨‍🏫</span></div>
+      <div class="badge"><b>+٨</b>سنوات خبرة</div>
+    </div>
+    <div class="about-copy reveal">
+      <span class="kicker" style="display:inline-block;background:#fff3d1;color:#8a6400;font-weight:700;font-size:.85rem;padding:6px 16px;border-radius:999px;margin-bottom:14px">عن المدرّس</span>
+      <h2>أ. محمد سامي - مدرّس رياضيات</h2>
+      <p>خريج كلية تربية قسم رياضيات، بشتغل مدرّس من ٢٠١٧. درّست في مدارس ومراكز، ومن ٢٠٢١ مركّز على التدريس الأونلاين عشان أوصل لطلبة أكتر بنفس الجودة.</p>
+      <p>أسلوبي بسيط: الطالب مش ناقصه حفظ، ناقصه فهم. لما يفهم القاعدة، المسألة مهما اتغير شكلها هيحلها.</p>
+      <ul class="about-list">
+        <li><span class="check">✓</span> بكالوريوس تربية - قسم الرياضيات</li>
+        <li><span class="check">✓</span> متخصص منهج إعدادي وثانوي (نظام حديث وقديم)</li>
+        <li><span class="check">✓</span> مجموعات صغيرة - ٨ طلبة كحد أقصى</li>
+        <li><span class="check">✓</span> متابعة مباشرة مع ولي الأمر على واتساب</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="section pricing" id="pricing">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">الأسعار</span>
+      <h2>باقات واضحة من غير مفاجآت</h2>
+      <p>كل الباقات تشمل الحصة الأولى التجريبية مجانًا - ولو مش عاجبك النظام، مش مكمل</p>
+    </div>
+    <div class="plans">
+      <div class="plan reveal">
+        <h3>مجموعة شهرية</h3>
+        <div class="price">٦٠٠ <small>ج/شهر</small></div>
+        <ul>
+          <li>حصتين أسبوعيًا (٨ حصص شهريًا)</li>
+          <li>مجموعة حتى ٨ طلبة</li>
+          <li>واجب أسبوعي مصحح</li>
+          <li>تقرير شهري لولي الأمر</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">احجز مكانك</a>
+      </div>
+      <div class="plan featured reveal">
+        <span class="ribbon">الأكثر طلبًا</span>
+        <h3>مجموعة + مراجعات</h3>
+        <div class="price">٩٠٠ <small>ج/شهر</small></div>
+        <ul>
+          <li>٣ حصص أسبوعيًا (١٢ حصة شهريًا)</li>
+          <li>مراجعة شهرية شاملة + امتحان محاكي</li>
+          <li>واجب أسبوعي مصحح مع ملاحظات</li>
+          <li>تقرير كل أسبوعين لولي الأمر</li>
+          <li>رد على أسئلة الطالب واتساب</li>
+        </ul>
+        <a href="#contact" class="btn btn-gold">احجز مكانك</a>
+      </div>
+      <div class="plan reveal">
+        <h3>حصة فردية</h3>
+        <div class="price">٢٥٠ <small>ج/حصة</small></div>
+        <ul>
+          <li>طالب واحد - تركيز كامل</li>
+          <li>تحديد موعد حسب جدولك</li>
+          <li>خطة مخصصة لنقط ضعف الطالب</li>
+          <li>ملخص مكتوب بعد كل حصة</li>
+        </ul>
+        <a href="#contact" class="btn btn-outline">احجز حصتك</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="testimonials">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">آراء أولياء الأمور</span>
+      <h2>النتيجة اللي بتتكلم عن نفسها</h2>
+    </div>
+    <div class="testis">
+      <div class="testi reveal">
+        <div class="stars">★★★★★</div>
+        <p>"بنتي كانت بتكره الرياضيات، بعد شهرين بقت بتحل لوحدها ودرجتها علت ١٨ درجة. أهم حاجة التقرير اللي بيوصلنا كل أسبوعين."</p>
+        <div class="who"><span class="pic">👩</span><div><b>أم مريم</b><span>ولية أمر - تالتة إعدادي</span></div></div>
+      </div>
+      <div class="testi reveal">
+        <div class="stars">★★★★★</div>
+        <p>"جربت مدرسين كتير قبل كده، الفرق هنا إن الأستاذ بيعرف نقط ضعف ابني بالظبط وبيشتغل عليها. المراجعة قبل الامتحان كانت ممتازة."</p>
+        <div class="who"><span class="pic">👨</span><div><b>أبو يوسف</b><span>ولي أمر - أولى ثانوي</span></div></div>
+      </div>
+      <div class="testi reveal">
+        <div class="stars">★★★★★</div>
+        <p>"الحصص الأونلاين وفرت علينا مشوار الدروس، والمتابعة أحسن من السنتر اللي كان بيروحه. الحصة الفردية قبل الامتحانات حاجة محترمة جدًا."</p>
+        <div class="who"><span class="pic">🧑</span><div><b>أم حبيبة</b><span>ولية أمر - تانية ثانوي</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="section faq" id="faq">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="kicker">أسئلة بتتسأل كتير</span>
+      <h2>عندك سؤال؟ غالبًا جاوبناه هنا</h2>
+    </div>
+    <div class="faq-list reveal">
+      <details open><summary>الحصص أونلاين ولا حضوري؟</summary><div class="answer">أونلاين بالكامل عن طريق زوم أو جوجل ميت. بتحتاج بس نت كويس وموبايل أو لابتوب. الحصة بتتسجل وبتتبعت للطالب بعدها.</div></details>
+      <details><summary>إزاي بتتابعوا مستوى الطالب؟</summary><div class="answer">كل طالب ليه ملف متابعة: امتحان قصير بعد كل وحدة، واجب أسبوعي مصحح، وتقرير لولي الأمر كل أسبوعين فيه الدرجات ونقط الضعف وخطة الشغل الجاية.</div></details>
+      <details><summary>لو الطالب فاتته حصة بيتعوض؟</summary><div class="answer">أيوه، بتبلغنا قبلها بـ٢٤ ساعة وبتتعوض في أقرب موعد يناسبك، زائد تسجيل الحصة اللي فاتته.</div></details>
+      <details><summary>الحصة التجريبية فعلًا مجانية؟</summary><div class="answer">فعلًا. أول حصة كاملة مجانًا عشان الطالب يجرب الأسلوب وولي الأمر يشوف نظام المتابعة. بعدها تقرر تكمل ولا لأ، من غير أي التزام.</div></details>
+      <details><summary>بتدرّس أنهي مناهج بالظبط؟</summary><div class="answer">رياضيات المرحلة الإعدادية (أولى لتالته) والثانوية العامة (جبر، هندسة، حساب مثلثات، تفاضل وتكامل) بالنظامين الحديث والقديم.</div></details>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta" id="contact">
+  <div class="wrap reveal">
+    <h2>جاهز تشوف الفرق في درجات ابنك؟</h2>
+    <p>ابعتلنا على واتساب دلوقتي واحجز الحصة التجريبية المجانية. بنرد في خلال ساعات قليلة.</p>
+    <a class="btn btn-wa" href="https://wa.me/201000000000?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%B9%D8%A7%D9%8A%D8%B2%20%D8%A3%D8%AD%D8%AC%D8%B2%20%D8%AD%D8%B5%D8%A9%20%D8%AA%D8%AC%D8%B1%D9%8A%D8%A8%D9%8A%D8%A9" target="_blank" rel="noopener">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="#fff" style="vertical-align:-4px"><path d="M12 .5C5.7.5.6 5.6.6 11.9c0 2 .5 4 1.5 5.7L.5 23.5l6-1.6c1.7.9 3.5 1.4 5.5 1.4 6.3 0 11.4-5.1 11.4-11.4S18.3.5 12 .5zm0 20.9c-1.7 0-3.4-.5-4.8-1.3l-.4-.2-3.6 1 1-3.5-.2-.4a9.3 9.3 0 0 1-1.4-5c0-5.2 4.2-9.4 9.4-9.4s9.4 4.2 9.4 9.4-4.2 9.4-9.4 9.4zm5.2-7c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+      كلمنا على واتساب
+    </a>
+    <span class="alt">أو اتصل مباشرة: <bdi dir="ltr">0100 000 0000</bdi> (رقم تجريبي)</span>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <b>أ. محمد سامي - مدرّس رياضيات</b><br>
+    موقع تجريبي لعرض نموذج تصميم - جميع الأسماء والأرقام والأسعار placeholders
+  </div>
+</footer>
+
+<a class="wa-float" href="https://wa.me/201000000000" target="_blank" rel="noopener" aria-label="واتساب">
+  <svg viewBox="0 0 24 24"><path d="M12 .5C5.7.5.6 5.6.6 11.9c0 2 .5 4 1.5 5.7L.5 23.5l6-1.6c1.7.9 3.5 1.4 5.5 1.4 6.3 0 11.4-5.1 11.4-11.4S18.3.5 12 .5zm0 20.9c-1.7 0-3.4-.5-4.8-1.3l-.4-.2-3.6 1 1-3.5-.2-.4a9.3 9.3 0 0 1-1.4-5c0-5.2 4.2-9.4 9.4-9.4s9.4 4.2 9.4 9.4-4.2 9.4-9.4 9.4zm5.2-7c-.3-.1-1.7-.8-1.9-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.8-.8-1.4-1.7-1.6-2-.2-.3 0-.4.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.2 3c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.7.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3z"/></svg>
+</a>
+
+<script>
+document.getElementById('burger').addEventListener('click',function(){
+  document.getElementById('navLinks').classList.toggle('open');
+});
+document.querySelectorAll('.nav-links a').forEach(function(a){
+  a.addEventListener('click',function(){document.getElementById('navLinks').classList.remove('open');});
+});
+var io=new IntersectionObserver(function(entries){
+  entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+</body>
+                                                               </html>
