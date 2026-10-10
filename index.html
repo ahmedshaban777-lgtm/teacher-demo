@@ -182,6 +182,24 @@ footer b{color:#cfd9e6}
   .float.f1{inset-inline-start:0}
   .float.f2{inset-inline-end:0}
 }
+/* ===== Full-length lesson player ===== */
+#video{scroll-margin-top:66px}
+.lesson-card{max-width:920px;margin:0 auto;background:#142840;border:1px solid rgba(255,210,87,.26);border-radius:24px;overflow:hidden;box-shadow:0 24px 70px rgba(0,0,0,.28)}
+.lesson-top{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 26px;border-bottom:1px solid rgba(255,255,255,.08)}
+.lesson-label{color:var(--gold2);font-weight:700;font-size:.95rem}
+.lesson-duration{flex-shrink:0;display:inline-flex;align-items:center;gap:7px;background:rgba(245,179,1,.12);border:1px solid rgba(245,179,1,.3);color:var(--gold2);padding:5px 12px;border-radius:999px;font-weight:700;font-size:.85rem}
+.lesson-player{position:relative;aspect-ratio:16/9;background:#050b12}
+.lesson-player iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+.lesson-info{padding:24px 26px 26px}
+.lesson-info h3{font-size:1.18rem;color:#fff;margin-bottom:8px}
+.lesson-info p{color:#b8c7d9;font-size:.98rem;max-width:740px}
+.lesson-features{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}
+.lesson-features span{padding:5px 11px;border-radius:8px;background:rgba(255,255,255,.06);color:#d7e1ed;font-size:.84rem}
+.lesson-credit{margin-top:18px;padding-top:16px;border-top:1px solid rgba(255,255,255,.1);font-size:.82rem!important;color:#94a9bf!important}
+.lesson-credit a{color:var(--gold2);text-decoration:underline;text-underline-offset:3px}
+.video-note{max-width:780px;margin:22px auto 0!important;color:#a4b7cd!important;font-size:.95rem!important}
+@media(max-width:600px){.lesson-top{padding:16px;gap:10px;flex-wrap:wrap}.lesson-info{padding:20px 16px}.lesson-info h3{font-size:1.05rem}.lesson-card{border-radius:16px}.video .section-head{margin-bottom:28px}.lesson-duration{font-size:.8rem}}
+
 </style>
 </head>
 <body>
@@ -249,18 +267,28 @@ footer b{color:#cfd9e6}
 <section class="section video" id="video">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="kicker">جرّب بنفسك</span>
-      <h2>شوف نموذج من شرحنا</h2>
-      <p>جزء من حصة حقيقية في الجبر - عشر دقايق هتوضحلك طريقة الشرح</p>
+      <span class="kicker">تجربة المشاهدة أونلاين</span>
+      <h2>حصة تجريبية كاملة - ٦٠ دقيقة</h2>
+      <p>فيديو أطول من ساعة، داخل الموقع مباشرة. جرّب التشغيل والتقديم وملء الشاشة من موبايلك أو الكمبيوتر.</p>
     </div>
-    <div class="video-frame reveal">
-      <div>
-        <div class="play">▶</div>
-        <h3>فيديو الحصة التجريبية</h3>
-        <p>(مساحة مخصصة لفيديو العميل - يتم تضمينه هنا)</p>
+    <article class="lesson-card reveal" aria-label="نموذج عرض فيديو كامل">
+      <div class="lesson-top">
+        <span class="lesson-label">▶ نموذج لفيديو طويل</span>
+        <span class="lesson-duration">المدة الفعلية <bdi>١:٠١:١٨</bdi></span>
       </div>
-    </div>
-    <p class="video-note">الفيديو مش هيظهر كلينك خارجي - بيتعرض جوه الموقع مباشرة</p>
+      <div class="lesson-player">
+        <iframe src="https://www.youtube.com/embed/l3QQQu7QLoM?rel=0&amp;playsinline=1" title="A Decade of Sun - NASA Goddard - فيديو تجريبي مدته ساعة ودقيقة" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="lesson-info">
+        <h3>عشر سنوات من الشمس في ساعة واحدة</h3>
+        <p>فيديو علمي من NASA Goddard لعرض تجربة تشغيل حصة كاملة. هذا نموذج تقني فقط، وليس درس رياضيات أو تسجيلًا للأستاذ محمد سامي. عند تجهيز حصتك، يظهر فيديو شرحك هنا بنفس الشكل.</p>
+        <div class="lesson-features" aria-label="مزايا المشغل">
+          <span>مشاهدة داخل الموقع</span><span>تقديم وإعادة الفيديو</span><span>ملء الشاشة</span><span>مناسب للموبايل</span>
+        </div>
+        <p class="lesson-credit">المصدر: NASA's Goddard Space Flight Center / SDO · الموسيقى: Solar Observer - Lars Leonhard. <a href="https://svs.gsfc.nasa.gov/13641/" target="_blank" rel="noopener noreferrer">تفاصيل الفيديو وحقوق الاستخدام</a></p>
+      </div>
+    </article>
+    <p class="video-note">الفيديو مستضاف على YouTube والموقع يعرضه هنا، لذلك لا نحتاج لرفع ملف الحصة إلى الموقع أو ضغطه إلى ٢٠ ميجا. قد تظهر هوية YouTube واقتراحاته داخل المشغّل.</p>
   </div>
 </section>
 
